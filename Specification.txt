@@ -1,0 +1,62 @@
+1. Introduction
+This document specifies the user interface requirements for the user management page of a website. The page allows administrators to create, edit, and disable user accounts.
+
+2. Users and Roles
+Target users: System administrators
+User roles: Admin, SuperAdmin
+
+3. Requirements
+The page should display a list of all users in the system.
+The list should include the user's ID, username, email address, and enabled status.
+Administrators must be able to create new user accounts.
+New user accounts require Username, Display Name, Phone, Email, User Role, and Enabled status.
+
+/* Those arent on the image you provided, but I belive they are required.
+Administrators must be able to disable user accounts.
+Administrators must be able to edit existing user accounts.
+Disabled users must not be able to log in to the system.
+The page must provide clear and concise error messages.
+*/
+
+4. UI Components
+Header: The header should display the application logo and the text "User Management".
+User list: The user list should display a table with the following columns:
+-ID
+-Username
+-Email
+-Enabled
+Search bar: There should be multiple filter bars,opening with a little filter icons. Bars should allow administrators to search for users by ; ID, User name, email, address,and enabled status.
+Order icon: There should be order ikons to order users. Ikons should allow administrators to oder users by: User name, Email address, and enabled status.
+Disable user button: The disable user button should disable a selected user account.
+Modal dialogs: The modal dialogs for creating and editing user accounts should have the following fields:
+Username
+Email
+Password
+Display name 
+Phone number
+User roles
+Enabled checkbox
+
+/* Those arent on the image you provided, but I belive they are required.
+Create user button: The create user button should open a modal dialog for creating a new user account.
+Edit user button: The edit user button should open a modal dialog for editing an existing user account.
+*/
+
+5. Behavior
+When the page loads, it should display a list of all users in the system.
+The search bar should filter the user list as the user types.
+Clicking the create user button should open a modal dialog for creating a new user account.
+Clicking the edit user button for a user should open a modal dialog for editing that user's account.
+Clicking the disable user button for a user should disable that user's account and remove them from the user list.
+When a user is created or edited, the modal dialog should close and the user list should be refreshed.
+Error messages should be displayed for invalid input or failed actions.
+
+6. Initial Page Load
+The page should load with the user list showing all users.
+The search bar should be empty.
+No user should be selected.
+
+7. Additional Notes
+The UI should be responsive and work well on different screen sizes.
+The UI should be consistent with the overall design of the web application.
+You may want to consider adding additional features, such as the ability to reset user passwords or delete user accounts.
